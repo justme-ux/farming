@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>AgroConnect — Dashboard</title>
+	<link rel="stylesheet" href="project.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="brand">AgroConnect</div>
+		<nav>
+			<div class="header-right">
+				<span id="userName" style="margin-right:12px;color:var(--muted)"></span>
+				<a href="#cart" class="btn small" style="margin-right:8px">Cart (<span id="cartCount">0</span>)</a>
+				<button id="logoutBtn" class="btn small">Logout</button>
+			</div>
+		</nav>
+	</header>
+
+	<main class="container">
+		<section class="hero">
+			<div class="hero-art">
+				<!-- Simple illustrative SVG as placeholder art (replace with AI-generated images if available) -->
+				<svg viewBox="0 0 800 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+					<defs>
+						<linearGradient id="g1" x1="0" x2="1">
+							<stop offset="0" stop-color="#f6fbf3"/>
+							<stop offset="1" stop-color="#e6f4ea"/>
+						</linearGradient>
+					</defs>
+						<rect width="100%" height="100%" fill="url(#g1)"/>
+						<g transform="translate(0,40)">
+								<ellipse cx="140" cy="140" rx="340" ry="70" fill="#daf0d9" />
+								<ellipse cx="620" cy="140" rx="220" ry="60" fill="#cfead0" />
+								<g transform="translate(60,40)">
+										<rect x="220" y="50" width="120" height="60" rx="8" fill="#2b8a3e"/>
+										<rect x="260" y="30" width="40" height="40" rx="6" fill="#fff" opacity="0.12"/>
+										<circle cx="260" cy="120" r="16" fill="#6b7280"/>
+										<circle cx="320" cy="120" r="16" fill="#6b7280"/>
+								</g>
+								<circle cx="720" cy="40" r="28" fill="#ffd166" opacity="0.95"/>
+						</g>
+				</svg>
+			</div>
+			<div class="hero-content">
+				<h2>Welcome, Farmer</h2>
+				<p>Access loans tailored for agriculture and shop discounted farming equipment.</p>
+			</div>
+		</section>
+
+		<section class="grid">
+			<div class="card" id="apply">
+				<div class="media">
+					<!-- placeholder image; replace with AI-generated asset -->
+					<svg viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice">
+										<rect width="100%" height="100%" fill="#eaf7ee"/>
+										<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#2b8a3e" font-size="20">Loans</text>
+					</svg>
+				</div>
+				<h3 class="gradient-text">Farming Loans</h3>
+				<p>Low-interest loans with flexible repayment for seeds, fertilizer, and working capital.</p>
+				<ul>
+					<li>Short-term: up to 6 months</li>
+					<li>Medium-term: up to 2 years</li>
+					<li>Collateral options and advisory support</li>
+				</ul>
+				<a class="btn primary" href="#apply">Apply for Loan</a>
+				<form id="loanForm" style="margin-top:12px;display:grid;gap:8px">
+					<input name="amount" placeholder="Amount (e.g., 5000)" required>
+					<input name="purpose" placeholder="Purpose (e.g., seeds)" required>
+					<button class="btn primary" type="submit">Submit Application</button>
+				</form>
+			</div>
+
+			<div class="card">
+				<div class="media">
+					<svg viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice">
+												<rect width="100%" height="100%" fill="#f2f9f6"/>
+												<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#2b8a3e" font-size="20">Equipment</text>
+											</svg>
+				</div>
+				<h3 class="gradient-text">Discounted Equipment</h3>
+				<p>Tractors, planters, and tools available at partner prices.</p>
+				<ul>
+					<li>Tractor Model X — 15% off</li>
+					<li>Seed Drill — 20% off</li>
+					<li>Hand Tools pack — 10% off</li>
+				</ul>
+				<a class="btn primary" href="#shop">Shop Equipment</a>
+			</div>
+		</section>
+
+		<section id="shop" class="grid" style="margin-top:8px">
+			<div class="card">
+				<h4>Tractor Model X</h4>
+				<p>Powerful small tractor.</p>
+				<div style="display:flex;gap:8px">
+					<button class="btn add-to-cart" data-id="tractor-x" data-title="Tractor Model X" data-price="15000">Add to cart</button>
+					<span style="color:var(--muted);align-self:center">15% off</span>
+				</div>
+			</div>
+
+			<div class="card">
+				<h4>Seed Drill</h4>
+				<p>Efficient seed planter.</p>
+				<div style="display:flex;gap:8px">
+					<button class="btn add-to-cart" data-id="seed-drill" data-title="Seed Drill" data-price="3200">Add to cart</button>
+					<span style="color:var(--muted);align-self:center">20% off</span>
+				</div>
+			</div>
+		</section>
+
+		<section class="info">
+			<h3>How it works</h3>
+			<p>Sign up, complete a short application, and choose equipment with partner discounts. Our team will contact you with loan terms.</p>
+		</section>
+	</main>
+
+	<footer class="site-foot">© 2026 AgroConnect</footer>
+	<script src="app.js"></script>
+</body>
+</html>
